@@ -1,7 +1,6 @@
 """    
 distace of point (x1, y1) to
 parabola: y = eta * (x - a)**2 + b
-https://mathworld.wolfram.com/Point-QuadraticDistance.html
 dist = min{r^2 = (y - y1)**2 + (x - x1)**2} for (x, y) on parabola -> minimizing dr^2/dx / 2 = 2 * eta**2 * (x - a)**3 + 2 * eta * (b - y1) * (x - a) + x - x1 (a cubic polynomial)
 """
 
