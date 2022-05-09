@@ -15,8 +15,7 @@ def d2parabola(x1, y1, eta, a, b):
         y_para = eta * (x_para - a)**2 + b
         return ((y_para - y1)**2 + (x_para - x1)**2)**0.5
 
-    params = [2 * eta**2, -6 * a * eta**2, 6*a**2 * eta**2 + 2 * eta * (b - y1) + 1, -2 * a**3 * eta**2 - 2 * a * eta * (b - y1) - x1] # coefficients of
- the cubic polynomial dr^2/dx / 2
+    params = [2 * eta**2, -6 * a * eta**2, 6*a**2 * eta**2 + 2 * eta * (b - y1) + 1, -2 * a**3 * eta**2 - 2 * a * eta * (b - y1) - x1] # coefficients of the cubic polynomial dr^2/dx / 2
     roots = np.roots(params)
     x_para = roots[np.isreal(roots)].real
     dd = dist(x_para).min()
